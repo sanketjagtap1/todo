@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="card mx-auto" style="width: 25rem;">
+        <div class="card-header text-center border-0 rounded-0 fs-4 fw-bold text-success">Add New Equipment</div>
+        <div class="card-body">
+          <hr class="border border-dark">
+            <form name="addequipment_form">
+                
+                <label for="category">Category</label>
+                <br>
+                <input type="text" class="form-control" name="e_category" id="category">
+
+                <label for="type">Equipment Type</label>
+                <br>
+                <input type="text" class="form-control" name="e_type" id="type">
+
+                <label for="">Equipment Name</label>
+                <br>
+                <input type="text" class="form-control" name="e_name" id="name">
+
+
+                <label for="rate">Rate</label>
+                <br>
+                <input type="number" class="form-control" name="rate" id="rate">
+                <br>
+
+                
+                <input type="text" hidden class="form-control" value="{{ session['user']['_id'] }}" name="user_id" id="userid">
+                <br>
+
+
+                <p class="error error-hidden"></p>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-success" value="Add Equipment" id="">
+                </div>
+                
+            </form>
+
+        </div>
+      </div>
+</div>
+
+{% endblock content %}

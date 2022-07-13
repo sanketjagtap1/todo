@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="card mx-auto" style="width: 25rem;">
+        <div class="card-header text-center border-0 rounded-0 fs-4 fw-bold text-success">Create An Account</div>
+        <div class="card-body">
+          <hr class="border border-dark">
+            <form name="signup_form">
+                <label for="">Name</label>
+                <br>
+                <input type="text" class="form-control" name="name" id="name">
+
+                <label for="email">Email</label>
+                <br>
+                <input type="email" class="form-control" name="email" id="email">
+
+                <label for="contact">Contact</label>
+                <br>
+                <input type="number" class="form-control" name="contact" id="contact">
+
+                <label for="password">Password</label>
+                <br>
+                <input type="password" class="form-control" name="password" id="password">
+                <br>
+
+                <p class="error error-hidden"></p>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-success" value="Sign Up" id="">
+                </div>
+                <div class="text-center">
+                    <a href="/" class="text-decoration-none ">Have an account</a>
+                </div>
+            </form>
+
+        </div>
+      </div>
+</div>
+
+{% endblock content %}
